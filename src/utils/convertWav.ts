@@ -9,5 +9,5 @@ export const convertWav = async ({
   filePath,
   outfilePath,
 }: ConvertWavProps) => {
-  return await execPromise(`ffmpeg -i ${filePath} -ar 16000 ${outfilePath}`);
+  return await execPromise(`ffmpeg -y -i ${filePath} -ar 16000 ${outfilePath}`);
 };
